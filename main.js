@@ -46,7 +46,7 @@ switch (msg.text ) {
 			}
 		})
 		break;
-		case 'Місце':
+		case 'Відповідь':
 		bot.sendMessage(id,'Відповідаю',{
 			reply_markup:{
 				force_reply:true
@@ -78,7 +78,9 @@ bot.sendMessage(id,'Клавіатура',{
 				request_contact:true
 			}]
 
-		]
+		],
+		one_time_keyboard:true
+		
 	}
 
 })
