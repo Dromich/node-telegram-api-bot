@@ -1,0 +1,22 @@
+{
+  "name": "telegram-api-bot",
+  "version": "1.0.0",
+  "description": "Бот для вивчення можливостей Telegram Bot API",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dromich/node-telegram-api-bot.git"
+  },
+  "author": "Dromich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dromich/node-telegram-api-bot/issues"
+  },
+  "homepage": "https://github.com/Dromich/node-telegram-api-bot#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.30.0"
+  }
+}
