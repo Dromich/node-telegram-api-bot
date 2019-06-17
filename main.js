@@ -39,8 +39,22 @@ switch (msg.text ) {
 			}
 		})
 		break;
+		case 'Відповідь':
+		bot.sendMessage(id,'Відповідаю',{
+			reply_markup:{
+				force_reply:true
+			}
+		})
+		break;
 		case 'Місце':
-		bot.sendMessage(id,'Закриваю клавіатуру',{
+		bot.sendMessage(id,'Відповідаю',{
+			reply_markup:{
+				force_reply:true
+			}
+		})
+		break;
+		case 'Відправити контакт':
+		bot.sendMessage(id,'Відповідаю',{
 			reply_markup:{
 				force_reply:true
 			}
@@ -54,9 +68,15 @@ switch (msg.text ) {
 bot.sendMessage(id,'Клавіатура',{
 	reply_markup:{
 		keyboard:[
-			['Місце'],
+			[{
+				text:'Місце',
+				request_location:true
+			}],
 			['Відповідь','Закрити'],
-			['Відправити контакт']
+			[{
+				text:'Відправити контакт',
+				request_contact:true
+			}]
 
 		]
 	}
