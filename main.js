@@ -61,7 +61,11 @@ switch (msg.text ) {
 		})
 		break;
 	default:
-	console.log('deffff')
+	bot.sendMessage(id,'Закриваю клавіатуру',{
+		reply_markup:{
+			remove_keyboard:true
+		}
+	})
 		break;
 }
 
