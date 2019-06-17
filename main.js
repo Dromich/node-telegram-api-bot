@@ -1,5 +1,6 @@
 const TelegramBot = require('node-telegram-bot-api');
 const TOKEN = require('./TOKEN.js');
+const helps = require('./helps')
 
 console.log('main started...')
 
@@ -14,5 +15,7 @@ const bot = new TelegramBot(TOKEN.T,{
 	
 })
 bot.on('message',msg =>{
-	bot.sendMessage(msg.chat.id,'Im bot')
+	
+	const { id } = msg.chat 
+	bot.sendMessage(id,helps.debug(msg))
 })
