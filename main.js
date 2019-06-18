@@ -17,10 +17,6 @@ const bot = new TelegramBot(TOKEN.T,{
 bot.on('message',msg =>{	
 	const { id } = msg.chat 
 
-
-	
-
-
 bot.sendMessage(id,'Клавіатура інлайн',{
 	reply_markup:{
 		inline_keyboard:[
@@ -60,5 +56,14 @@ bot.sendMessage(id,'Клавіатура інлайн',{
 bot.on('callback_query',query =>{
 	//bot.sendMessage(query.message.chat.id,helps.debug(query))
 
-	bot.answerCallbackQuery(query.id,`${query.data}`)
+if (query.data === 'forward') {
+	bot.sendPhoto(query.message.chat.id, './love_pic/love_is_01.jpg')
+	
+}else{
+	bot.sendPhoto(query.message.chat.id, './love_pic/love_is_02.jpg')
+}
+
+
+	//bot.answerCallbackQuery(query.id,`${query.data}`)
+
 })
